@@ -1,0 +1,4481 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Webserver" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<MakeCommands>
+			<Build command="" />
+			<CompileFile command="" />
+			<Clean command="" />
+			<DistClean command="$make -f $makefile distclean$target" />
+			<AskRebuildNeeded command="" />
+			<SilentBuild command=" &gt; $(CMD_NULL)" />
+		</MakeCommands>
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/debug/webserv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Option projectLibDirsRelation="2" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-ansi" />
+					<Add option="-g" />
+					<Add directory="/Users/floyd/Desktop/Webserver/libressl" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lcrypto" />
+					<Add option="-lssl" />
+					<Add directory="/Users/floyd/Desktop/Webserver/libressl" />
+				</Linker>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="$make -f $makefile clean$target" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/release/webserv" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="$make -f $makefile clean$target" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="web">
+				<Option output="bin/web/Webserver" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/web/" />
+				<Option object_output="obj/web/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="-lcrypto" />
+			<Add option="-lssl" />
+		</Linker>
+		<Unit filename="helper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="helper.h" />
+		<Unit filename="libressl/apps/apps.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/apps.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/apps_posix.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/apps_win.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/asn1pars.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/ca.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/ciphers.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/cms.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/crl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/crl2p7.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/dgst.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/dh.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/dhparam.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/dsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/dsaparam.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/ec.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/ecparam.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/engine.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/errstr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/gendh.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/gendsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/genpkey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/genrsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/nseq.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/ocsp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/openssl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/passwd.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/pkcs12.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/pkcs7.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/pkcs8.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/pkey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/pkeyparam.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/pkeyutl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/poll_win.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/prime.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/progs.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/rand.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/req.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/rsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/rsautl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/s_apps.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/s_cb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/s_client.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/s_server.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/s_socket.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/s_time.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/sess_id.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/smime.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/speed.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/spkac.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/strtonum.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/testdsa.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/testrsa.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/timeouts.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/ts.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/verify.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/version.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/apps/x509.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes_cbc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes_cfb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes_core.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes_ctr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes_ecb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes_ige.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes_misc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes_ofb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aes_wrap.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aesni-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aesni-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aesni-sha1-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/aesni-sha1-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/bsaes-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/bsaes-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/vpaes-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/aes/vpaes-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_bitstr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_bool.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_bytes.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_d2i_fp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_digest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_dup.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_enum.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_gentm.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_i2d_fp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_int.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_mbstr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_object.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_octet.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_print.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_set.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_sign.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_strex.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_strnid.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_time.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_type.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_utctm.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_utf8.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/a_verify.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/ameth_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/asn1_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/asn1_gen.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/asn1_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/asn1_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/asn1_par.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/asn_mime.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/asn_moid.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/asn_pack.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/bio_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/bio_ndef.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/charmap.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/d2i_pr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/d2i_pu.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/evp_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/f_enum.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/f_int.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/f_string.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/i2d_pr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/i2d_pu.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/n_pkey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/nsseq.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/p5_pbe.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/p5_pbev2.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/p8_pkey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/t_bitst.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/t_crl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/t_pkey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/t_req.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/t_spki.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/t_x509.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/t_x509a.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/tasn_dec.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/tasn_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/tasn_fre.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/tasn_new.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/tasn_prn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/tasn_typ.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/tasn_utl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_algor.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_attrib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_bignum.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_crl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_exten.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_info.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_long.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_name.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_nx509.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_pkey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_pubkey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_req.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_sig.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_spki.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_val.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_x509.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/asn1/x_x509a.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bf/bf_cfb64.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bf/bf_ecb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bf/bf_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bf/bf_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bf/bf_ofb64.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bf/bf_pi.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bf/bf_skey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/b_dump.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/b_posix.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/b_print.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/b_sock.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/b_win.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bf_buff.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bf_nbio.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bf_null.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bio_cb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bio_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bio_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bss_acpt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bss_bio.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bss_conn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bss_dgram.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bss_fd.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bss_file.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bss_log.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bss_mem.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bss_null.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bio/bss_sock.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_add.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_asm.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_blind.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_const.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_ctx.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_depr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_div.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_exp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_exp2.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_gcd.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_gf2m.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_kron.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_lcl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_mod.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_mont.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_mpi.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_mul.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_nist.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_prime.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_prime.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_print.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_rand.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_recp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_shift.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_sqr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_sqrt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_word.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/bn_x931p.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/gf2m-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/gf2m-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/modexp512-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/modexp512-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/mont-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/mont-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/mont5-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/bn/mont5-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/buffer/buf_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/buffer/buf_str.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/buffer/buffer.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/camellia.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/camellia.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/cmll-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/cmll-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/cmll_cbc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/cmll_cfb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/cmll_ctr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/cmll_ecb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/cmll_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/cmll_misc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/camellia/cmll_ofb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cast/c_cfb64.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cast/c_ecb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cast/c_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cast/c_ofb64.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cast/c_skey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cast/cast_lcl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cast/cast_s.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/chacha/chacha-merged.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/chacha/chacha.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cmac/cm_ameth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cmac/cm_pmeth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cmac/cmac.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/comp/c_rle.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/comp/c_zlib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/comp/comp_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/comp/comp_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/arc4random.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/arc4random.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/arc4random_freebsd.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/arc4random_hpux.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/arc4random_linux.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/arc4random_netbsd.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/arc4random_osx.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/arc4random_solaris.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/arc4random_win.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/bsd-asprintf.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/chacha_private.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/explicit_bzero.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/getentropy_freebsd.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/getentropy_hpux.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/getentropy_linux.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/getentropy_netbsd.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/getentropy_osx.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/getentropy_solaris.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/getentropy_win.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/issetugid_hpux.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/issetugid_linux.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/issetugid_win.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/reallocarray.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/strlcat.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/strlcpy.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/strndup.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/strnlen.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/timingsafe_bcmp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/compat/timingsafe_memcmp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/conf/conf_api.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/conf/conf_def.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/conf/conf_def.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/conf/conf_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/conf/conf_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/conf/conf_mall.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/conf/conf_mod.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/conf/conf_sap.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cpt_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cpuid-elf-x86_64.S">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cpuid-macosx-x86_64.S">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cryptlib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cryptlib.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/cversion.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/cbc_cksm.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/cbc_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/cfb64ede.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/cfb64enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/cfb_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/des_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/des_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/ecb3_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/ecb_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/ede_cbcm_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/enc_read.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/enc_writ.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/fcrypt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/fcrypt_b.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/ncbc_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/ofb64ede.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/ofb64enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/ofb_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/pcbc_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/qud_cksm.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/rand_key.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/set_key.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/spr.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/str2key.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/des/xcbc_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dh/dh_ameth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dh/dh_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dh/dh_check.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dh/dh_depr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dh/dh_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dh/dh_gen.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dh/dh_key.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dh/dh_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dh/dh_pmeth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dh/dh_prn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_ameth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_depr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_gen.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_key.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_ossl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_pmeth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_prn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_sign.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dsa/dsa_vrf.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dso/dso_dlfcn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dso/dso_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dso/dso_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dso/dso_null.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/dso/dso_openssl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec2_mult.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec2_oct.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec2_smpl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_ameth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_check.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_curve.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_cvt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_key.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_lcl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_mult.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_oct.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_pmeth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ec_print.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/eck_prn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ecp_mont.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ecp_nist.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ecp_oct.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ec/ecp_smpl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdh/ech_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdh/ech_key.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdh/ech_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdh/ech_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdh/ech_ossl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdsa/ecs_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdsa/ecs_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdsa/ecs_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdsa/ecs_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdsa/ecs_ossl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdsa/ecs_sign.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ecdsa/ecs_vrf.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_all.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_cnf.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_ctrl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_dyn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_fat.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_init.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_int.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_list.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_openssl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_pkey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_rsax.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/eng_table.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_asnmth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_cipher.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_dh.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_digest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_dsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_ecdh.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_ecdsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_pkmeth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_rand.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_rsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/engine/tb_store.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/err/err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/err/err_all.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/err/err_prn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/bio_b64.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/bio_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/bio_md.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/c_all.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/c_allc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/c_alld.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/digest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_aes.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_aes_cbc_hmac_sha1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_bf.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_camellia.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_cast.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_chacha.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_chacha20poly1305.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_des.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_des3.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_gost2814789.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_idea.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_null.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_old.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_rc2.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_rc4.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_rc4_hmac_md5.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/e_xcbc_d.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/encode.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/evp_aead.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/evp_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/evp_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/evp_key.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/evp_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/evp_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/evp_pbe.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/evp_pkey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_dss.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_dss1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_ecdsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_gost2814789.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_gostr341194.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_md4.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_md5.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_mdc2.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_null.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_ripemd.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_sha.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_sha1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_sigver.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_streebog.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/m_wp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/names.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/p5_crpt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/p5_crpt2.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/p_dec.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/p_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/p_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/p_open.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/p_seal.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/p_sign.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/p_verify.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/pmeth_fn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/pmeth_gn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/evp/pmeth_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ex_data.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gost.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gost2814789.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gost89_keywrap.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gost89_params.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gost89imit_ameth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gost89imit_pmeth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gost_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gost_asn1.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gost_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gost_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gostr341001.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gostr341001_ameth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gostr341001_key.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gostr341001_params.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gostr341001_pmeth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/gostr341194.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/gost/streebog.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/hmac/hm_ameth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/hmac/hm_pmeth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/hmac/hmac.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/idea/i_cbc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/idea/i_cfb64.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/idea/i_ecb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/idea/i_ofb64.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/idea/i_skey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/idea/idea_lcl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/krb5/krb5_asn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/lhash/lh_stats.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/lhash/lhash.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/malloc-wrapper.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/md32_common.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/md4/md4_dgst.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/md4/md4_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/md4/md4_one.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/md5/md5-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/md5/md5-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/md5/md5_dgst.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/md5/md5_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/md5/md5_one.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/mdc2/mdc2_one.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/mdc2/mdc2dgst.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/mem_clr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/mem_dbg.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/cbc128.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/ccm128.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/cfb128.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/ctr128.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/cts128.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/gcm128.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/ghash-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/ghash-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/modes_lcl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/ofb128.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/modes/xts128.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/o_init.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/o_str.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/o_time.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/o_time.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/objects/o_names.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/objects/obj_dat.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/objects/obj_dat.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/objects/obj_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/objects/obj_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/objects/obj_xref.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/objects/obj_xref.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ocsp/ocsp_asn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ocsp/ocsp_cl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ocsp/ocsp_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ocsp/ocsp_ext.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ocsp/ocsp_ht.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ocsp/ocsp_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ocsp/ocsp_prn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ocsp/ocsp_srv.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ocsp/ocsp_vfy.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_all.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_info.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_oth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_pk8.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_pkey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_seal.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_sign.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_x509.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pem_xaux.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pem/pvkfmt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_add.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_asn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_attr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_crpt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_crt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_decr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_init.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_key.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_kiss.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_mutl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_npas.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_p8d.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_p8e.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/p12_utl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs12/pk12err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs7/bio_pk7.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs7/pk7_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs7/pk7_attr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs7/pk7_doit.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs7/pk7_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs7/pk7_mime.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs7/pk7_smime.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/pkcs7/pkcs7err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/poly1305/poly1305-donna.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/poly1305/poly1305.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rand/rand_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rand/rand_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rand/randfile.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc2/rc2_cbc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc2/rc2_ecb.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc2/rc2_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc2/rc2_skey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc2/rc2cfb64.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc2/rc2ofb64.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc4/rc4-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc4/rc4-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc4/rc4-md5-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc4/rc4-md5-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc4/rc4_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc4/rc4_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rc4/rc4_skey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ripemd/rmd_dgst.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ripemd/rmd_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ripemd/rmd_one.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ripemd/rmdconst.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_ameth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_chk.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_crpt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_depr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_eay.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_gen.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_none.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_oaep.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_pk1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_pmeth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_prn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_pss.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_saos.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_sign.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_ssl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/rsa/rsa_x931.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha1-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha1-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha1_one.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha1dgst.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha256-elf-x86_64.S">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha256-macosx-x86_64.S">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha256.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha512-elf-x86_64.S">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha512-macosx-x86_64.S">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha512.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha_dgst.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/sha/sha_one.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/stack/stack.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_conf.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_req_print.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_req_utils.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_rsp_print.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_rsp_sign.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_rsp_utils.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_rsp_verify.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ts/ts_verify_ctx.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/txt_db/txt_db.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ui/ui_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ui/ui_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ui/ui_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ui/ui_openssl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ui/ui_openssl_win.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/ui/ui_util.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/whrlpool/wp-elf-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/whrlpool/wp-macosx-x86_64.s">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/whrlpool/wp_block.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/whrlpool/wp_dgst.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/whrlpool/wp_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/by_dir.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/by_file.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_att.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_cmp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_d2.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_def.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_ext.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_lcl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_lu.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_obj.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_r2x.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_req.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_set.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_trs.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_txt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_v3.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_vfy.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509_vpm.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509cset.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509name.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509rset.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509spki.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x509type.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509/x_all.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/ext_dat.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/pcy_cache.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/pcy_data.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/pcy_int.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/pcy_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/pcy_map.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/pcy_node.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/pcy_tree.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_akey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_akeya.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_alt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_bcons.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_bitst.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_conf.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_cpols.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_crld.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_enum.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_extku.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_genn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_ia5.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_info.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_int.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_ncons.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_ocsp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_pci.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_pcia.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_pcons.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_pku.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_pmaps.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_prn.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_purp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_skey.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_sxnet.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3_utl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/crypto/x509v3/v3err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/arpa/inet.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/err.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/machine/endian.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/netdb.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/netinet/in.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/netinet/tcp.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/aes.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/asn1.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/asn1_mac.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/asn1t.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/bio.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/blowfish.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/bn.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/buffer.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/camellia.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/cast.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/chacha.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/cmac.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/cms.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/comp.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/conf.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/conf_api.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/crypto.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/des.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/dh.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/dsa.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/dso.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/dtls1.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/e_os2.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ec.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ecdh.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ecdsa.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/engine.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/err.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/evp.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/gost.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/hmac.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/idea.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/krb5_asn.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/lhash.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/md4.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/md5.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/mdc2.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/modes.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/obj_mac.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/objects.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ocsp.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/opensslconf.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/opensslfeatures.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/opensslv.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ossl_typ.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/pem.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/pem2.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/pkcs12.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/pkcs7.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/poly1305.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/rand.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/rc2.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/rc4.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/rc5.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ripemd.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/rsa.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/safestack.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/sha.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/srtp.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ssl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ssl2.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ssl23.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ssl3.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/stack.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/tls1.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ts.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/txt_db.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ui.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/ui_compat.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/whrlpool.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/x509.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/x509_vfy.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/openssl/x509v3.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/poll.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/pqueue.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/stdio.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/stdlib.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/string.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/sys/ioctl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/sys/mman.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/sys/select.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/sys/socket.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/sys/times.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/sys/types.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/syslog.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/tls.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/unistd.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/include/win32netcompat.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/bio_ssl.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/d1_both.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/d1_clnt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/d1_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/d1_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/d1_meth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/d1_pkt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/d1_srtp.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/d1_srvr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/pqueue.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s23_clnt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s23_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s23_meth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s23_pkt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s23_srvr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s3_both.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s3_cbc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s3_clnt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s3_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s3_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s3_meth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s3_pkt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/s3_srvr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/srtp.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_algs.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_asn1.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_cert.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_ciph.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_err.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_err2.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_locl.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_rsa.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_sess.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_stat.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/ssl_txt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/t1_clnt.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/t1_enc.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/t1_lib.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/t1_meth.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/t1_reneg.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/ssl/t1_srvr.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/aeadtest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/aes_wrap.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/arc4randomforktest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/asn1test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/base64test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/bftest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/bntest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/casttest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/chachatest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/cts128test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/destest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/dhtest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/dsatest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/ecdhtest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/ecdsatest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/ectest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/enginetest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/evptest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/explicit_bzero.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/exptest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/gcm128test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/gost2814789t.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/hmactest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/ideatest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/igetest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/md4test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/md5test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/mdc2test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/memmem.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/mont.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/pidwraptest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/pkcs7test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/poly1305test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/pq_test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/randtest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/rc2test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/rc4test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/rmdtest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/sha1test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/sha256test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/sha512test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/shatest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/ssltest.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/timingsafe.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tests/utf8test.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tls/tls.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tls/tls_client.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tls/tls_config.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tls/tls_internal.h">
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tls/tls_server.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tls/tls_util.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="libressl/tls/tls_verify.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+			<Option target="web" />
+		</Unit>
+		<Unit filename="logger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="logger.h" />
+		<Unit filename="reqhead.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="reqhead.h" />
+		<Unit filename="resource.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="resource.h" />
+		<Unit filename="resphead.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="resphead.h" />
+		<Unit filename="servreq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="servreq.h" />
+		<Unit filename="webserv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder>
+				<lib name="libssl" />
+				<lib name="openssl" />
+			</lib_finder>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

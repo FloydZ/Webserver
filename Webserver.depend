@@ -1,0 +1,253 @@
+# depslib dependency file v1.0
+1423090168 source:/Users/floyd/Desktop/Webserver/helper.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<ctype.h>
+	<stdarg.h>
+	<time.h>
+	<string.h>
+	"helper.h"
+
+1423058400 /Users/floyd/Desktop/Webserver/helper.h
+	<unistd.h>
+
+1423080334 source:/Users/floyd/Desktop/Webserver/logger.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<ctype.h>
+	<stdarg.h>
+	<time.h>
+	<string.h>
+	"logger.h"
+
+1423079803 /Users/floyd/Desktop/Webserver/logger.h
+
+963935842 source:/Users/floyd/Desktop/Webserver/reqhead.c
+	<sys/time.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"reqhead.h"
+	"servreq.h"
+	"helper.h"
+
+963935842 /Users/floyd/Desktop/Webserver/reqhead.h
+
+1422812697 /Users/floyd/Desktop/Webserver/servreq.h
+
+1422802499 source:/Users/floyd/Desktop/Webserver/resource.c
+	<unistd.h>
+	<fcntl.h>
+	<string.h>
+	<stdio.h>
+	"resource.h"
+	"reqhead.h"
+	"helper.h"
+
+963935842 /Users/floyd/Desktop/Webserver/resource.h
+	"reqhead.h"
+
+963935842 source:/Users/floyd/Desktop/Webserver/resphead.c
+	<unistd.h>
+	<stdio.h>
+	"resphead.h"
+	"helper.h"
+
+963935842 /Users/floyd/Desktop/Webserver/resphead.h
+	"reqhead.h"
+
+1423149530 source:/Users/floyd/Desktop/Webserver/servreq.c
+	<stdio.h>
+	<errno.h>
+	"helper.h"
+	"reqhead.h"
+	"resphead.h"
+	"resource.h"
+	"logger.h"
+
+1424707075 source:/Users/floyd/Desktop/Webserver/webserv.c
+	<sys/socket.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<stdio.h>
+	<stdlib.h>
+	"helper.h"
+	"logger.h"
+	"servreq.h"
+	<openssl/bio.h>
+	<openssl/err.h>
+	<openssl/rand.h>
+	<openssl/ssl.h>
+	<openssl/opensslconf.h>
+	"libressl/include/openssl/bio.h"
+	"libressl/include/tls.h"
+	"libressl/include/err.h"
+	"libressl/ssl/ssl_locl.h"
+	"libressl/tls/tls_internal.h"
+	<openssl/ossl_typ.h>
+
+1417907750 /Users/floyd/Desktop/Webserver/libressl/include/tls.h
+
+1417907670 /Users/floyd/Desktop/Webserver/libressl/include/err.h
+	<errno.h>
+	<stdio.h>
+	<string.h>
+
+1417907750 /Users/floyd/Desktop/Webserver/libressl/include/openssl/bio.h
+	<openssl/opensslconf.h>
+	<stdio.h>
+	<stdarg.h>
+	<openssl/crypto.h>
+	<stdint.h>
+
+1421242086 /Users/floyd/Desktop/Webserver/libressl/tls/tls_internal.h
+	<openssl/ssl.h>
+
+1423157907 /Users/floyd/Desktop/Webserver/libressl/ssl/ssl_locl.h
+	<sys/types.h>
+	<errno.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<unistd.h>
+	<openssl/opensslconf.h>
+	<openssl/bio.h>
+	<openssl/buffer.h>
+	<openssl/dsa.h>
+	<openssl/err.h>
+	<openssl/rsa.h>
+	<openssl/ssl.h>
+	<openssl/stack.h>
+
+1427025312 source:/media/veracrypt1/Programmieren/C/Webserver/helper.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<ctype.h>
+	<stdarg.h>
+	<time.h>
+	<string.h>
+	"helper.h"
+
+1423058400 /media/veracrypt1/Programmieren/C/Webserver/helper.h
+	<unistd.h>
+
+1427024141 source:/media/veracrypt1/Programmieren/C/Webserver/logger.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<ctype.h>
+	<stdarg.h>
+	<time.h>
+	<string.h>
+	"logger.h"
+
+1423079802 /media/veracrypt1/Programmieren/C/Webserver/logger.h
+
+1427026379 source:/media/veracrypt1/Programmieren/C/Webserver/reqhead.c
+	<sys/time.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"reqhead.h"
+	"servreq.h"
+	"helper.h"
+
+1427026286 /media/veracrypt1/Programmieren/C/Webserver/reqhead.h
+
+1427025709 /media/veracrypt1/Programmieren/C/Webserver/servreq.h
+	<openssl/bio.h>
+	<openssl/err.h>
+	<openssl/rand.h>
+	<openssl/ssl.h>
+	<openssl/opensslconf.h>
+
+1426979161 source:/media/veracrypt1/Programmieren/C/Webserver/resource.c
+	<unistd.h>
+	<fcntl.h>
+	<string.h>
+	<stdio.h>
+	"resource.h"
+	"reqhead.h"
+	"helper.h"
+
+963935842 /media/veracrypt1/Programmieren/C/Webserver/resource.h
+	"reqhead.h"
+
+1426979161 source:/media/veracrypt1/Programmieren/C/Webserver/resphead.c
+	<unistd.h>
+	<stdio.h>
+	"resphead.h"
+	"helper.h"
+
+963935842 /media/veracrypt1/Programmieren/C/Webserver/resphead.h
+	"reqhead.h"
+
+1427031134 source:/media/veracrypt1/Programmieren/C/Webserver/servreq.c
+	<stdio.h>
+	<errno.h>
+	"helper.h"
+	"reqhead.h"
+	"resphead.h"
+	"resource.h"
+	"logger.h"
+	<openssl/bio.h>
+	<openssl/err.h>
+	<openssl/rand.h>
+	<openssl/ssl.h>
+	<openssl/opensslconf.h>
+
+1427031548 source:/media/veracrypt1/Programmieren/C/Webserver/webserv.c
+	<sys/socket.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<stdio.h>
+	<stdlib.h>
+	"helper.h"
+	"logger.h"
+	"servreq.h"
+	<openssl/bio.h>
+	<openssl/err.h>
+	<openssl/rand.h>
+	<openssl/ssl.h>
+	<openssl/opensslconf.h>
+
+1417907750 /media/veracrypt1/Programmieren/C/Webserver/libressl/include/openssl/bio.h
+	<openssl/opensslconf.h>
+	<stdio.h>
+	<stdarg.h>
+	<openssl/crypto.h>
+	<stdint.h>
+
+1417907750 /media/veracrypt1/Programmieren/C/Webserver/libressl/include/tls.h
+
+1417907670 /media/veracrypt1/Programmieren/C/Webserver/libressl/include/err.h
+	<errno.h>
+	<stdio.h>
+	<string.h>
+
+1423157906 /media/veracrypt1/Programmieren/C/Webserver/libressl/ssl/ssl_locl.h
+	<sys/types.h>
+	<errno.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<unistd.h>
+	<openssl/opensslconf.h>
+	<openssl/bio.h>
+	<openssl/buffer.h>
+	<openssl/dsa.h>
+	<openssl/err.h>
+	<openssl/rsa.h>
+	<openssl/ssl.h>
+	<openssl/stack.h>
+
+1421242086 /media/veracrypt1/Programmieren/C/Webserver/libressl/tls/tls_internal.h
+	<openssl/ssl.h>
+
