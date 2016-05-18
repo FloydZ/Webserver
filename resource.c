@@ -25,7 +25,7 @@
     the server will use, i.e. /index.html will translate
     here to /home/httpd/html/index.html                   */
 
-static char server_root[1000] = "/Users/floyd/Downloads/webserv";
+static char server_root[1000] = "/tmp";
 
 
 /*  Returns a resource  */
