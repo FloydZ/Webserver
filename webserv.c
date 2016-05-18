@@ -99,8 +99,6 @@ int main(int argc, char *argv[]) {
     SSL_CTX *ctx;
     struct sockaddr_in servaddr, addr;
 
-    /*chdir("/home/Pr0gramming/Bilder");*/
-
     tp_log_init("log.txt",1);
 
     ctx = InitServerCTX();        /* initialize SSL */
